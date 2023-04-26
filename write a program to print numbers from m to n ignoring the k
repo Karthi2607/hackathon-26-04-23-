@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int m, n, k, i;
+    printf("Enter m, n, and k: ");
+    scanf("%d %d %d", &m, &n, &k);
+    i = m;
+    while (i <= n) {
+        printf("%d ", i);
+        i =i+ k;
+        if (i > n) {
+            break;
+        }
+        i++;
+    }
+return 0;
+}
