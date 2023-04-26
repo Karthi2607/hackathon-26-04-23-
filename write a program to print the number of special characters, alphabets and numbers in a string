@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char input[100];
+    int special_chars = 0, alphabets = 0, numbers = 0;
+    
+    printf("Enter a string: ");
+    fgets(input, 100, stdin);
+    
+    printf("Special characters in the string: ");
+    for (int i = 0; input[i] != '\0'; i++) {
+        if (!isalnum(input[i]) && !isspace(input[i])) {
+            printf("%c ", input[i]);
+            special_chars++;
+        } else if (isalpha(input[i])) {
+            alphabets++;
+        } else if (isdigit(input[i])) {
+            numbers++;
+        }
+    }
+    
+    printf("\nNumber of special characters: %d", special_chars);
+    printf("\nNumber of alphabets: %d", alphabets);
+    printf("\nNumber of numbers: %d", numbers);
+    
+    return 0;
+}
