@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int m, n, k;
+    printf("Enter m, n, and k: ");
+    scanf("%d %d %d", &m, &n, &k);
+
+    for (int i = m; i <= n; i++) {
+        if (i == k) {
+            continue;
+        }
+        printf("%d ", i);
+    }
+
+    return 0;
