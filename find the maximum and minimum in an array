@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int arr[] = {11, 15, 27, 30, 3}; 
+    int size = sizeof(arr) / sizeof(arr[0]); 
+    
+    int max_val = arr[0]; 
+    int min_val = arr[0]; 
+    
+    
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > max_val) {
+            max_val = arr[i]; 
+        }
+        if (arr[i] < min_val) {
+            min_val = arr[i]; 
+        }
+    }
+    
+    
+    printf("Maximum value: %d\n", max_val);
+    printf("Minimum value: %d\n", min_val);
+    
+    return 0;
+}
